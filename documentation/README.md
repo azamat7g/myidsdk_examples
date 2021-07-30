@@ -1,5 +1,7 @@
 ![alt text](img/logo.png)
 
+[русский](README.ru.md)
+
 # myID SDK
 MyID – bu O'zbekistonda masofaviy identifikatsiyalashning eng oson, qulay va ishonchli usuli.
 
