@@ -1,5 +1,7 @@
 ![alt text](img/logo.png)
 
+[o'zbekcha](README.md)
+
 # myID SDK
 MyID - самый простой, удобный и надежный способ удаленной идентификации в Узбекистане. 
 
