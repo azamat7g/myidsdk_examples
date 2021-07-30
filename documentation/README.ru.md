@@ -1,18 +1,18 @@
 ![alt text](img/logo.png)
 
-[русский](README.ru.md)
+[o'zbekcha](README.md)
 
 # myID SDK
-MyID – bu O'zbekistonda masofaviy identifikatsiyalashning eng oson, qulay va ishonchli usuli.
+MyID - самый простой, удобный и надежный способ удаленной идентификации в Узбекистане. 
 
-## Talablar
-myID SDK ni o'z loyihangizga ulashdan oldin siz bizdan maxsus `clinet_id` va `clinet_secrect` tokenlarini va SDK ni zip arxivini olishingiz kerak.
+## Требования 
+Перед подключением myID SDK к вашему проекту, вам необходимо получить от нас специальные токены `clinet_id` и `clinet_secrect` и zip-архив SDK. 
 
-## Boshlashdan oldin
-Pastda keltiriladigan kodlarni to'li ishlaydigan talqinini ushbu repozitoriyadan topish mumkun https://github.com/azamat7g/myidsdk_examples
+## Прежде чем вы начнете 
+Полнофункциональную версию приведенных ниже кодов можно найти в этом [репозитории](https://github.com/azamat7g/myidsdk_examples)
 
-## SDKni ulash
-Modul urevinidagi `build.gradle` faylni ochamiz. Android qismiga maxsus repozitoriyani qo'shamiz va `minSdkVersion` ni 21 qilib qo'yamiz:
+## Подключите SDK
+Откройте файл `build.gradle` на уровне модуля. Добавьте специальный репозиторий в раздел Android и установите `minSdkVersion` на 21: 
 
 ```gradle
 android {
@@ -33,8 +33,7 @@ android {
     }
 }
 ```
-
-"dependencies" qismida SDKni ulaymiz:
+В разделе `dependencies` подключаем SDK:
 
 ```gradle
 dependencies {
@@ -44,32 +43,35 @@ dependencies {
 }
 ```
 
-va `app/libs` papkasini ichiga SDKni zip arxivdan yoyib yuboramiz. Fayllar joylashuvi quyidagi ko'rinishga kelishi kerak
+и раскапуйте SDK из zip-архива в папку `app/libs`. Расположение файлов должно выглядеть следующим образом: 
 
 ```
 ├── libs
-│   └── myid
-│       └── uz
-│           └── uzinfocom
-│               └── myidsdk
-│                   ├── flutter_release
-│                   │   ├── 1.0
-│                   │   │   ├── flutter_release-1.0.aar
-│                   │   │   ├── flutter_release-1.0.aar.md5
-│                   │   │   ├── flutter_release-1.0.aar.sha1
-│                   │   │   ├── flutter_release-1.0.pom
-│                   │   │   ├── flutter_release-1.0.pom.md5
-│                   │   │   └── flutter_release-1.0.pom.sha1
-│                   │   ├── maven-metadata.xml
-│                   │   ├── maven-metadata.xml.md5
-│                   │   └── maven-metadata.xml.sha1
-│                   └── modules
-│                       ├── ...
-│                       ......
+│   └── myid
+│       └── uz
+│           └── uzinfocom
+│               └── myidsdk
+│                   ├── flutter_release
+│                   │   ├── 1.0
+│                   │   │   ├── flutter_release-1.0.aar
+│                   │   │   ├── flutter_release-1.0.aar.md5
+│                   │   │   ├── flutter_release-1.0.aar.sha1
+│                   │   │   ├── flutter_release-1.0.pom
+│                   │   │   ├── flutter_release-1.0.pom.md5
+│                   │   │   └── flutter_release-1.0.pom.sha1
+│                   │   ├── maven-metadata.xml
+│                   │   ├── maven-metadata.xml.md5
+│                   │   └── maven-metadata.xml.sha1
+│                   └── modules
+│                       ├── ...
+│                       ......
 ```
 
-## SDKni loyihaga qo'shish
+## Добавить SDK в проект 
 SDKni loyihaga qo'shish uchun maxsus Activity yaratish kerak. Buning uchun "Android studio" dasturida `File > New > Activity > Empty activity` tanlab yangi activity qo'shamiz. Activityga nom beramiz. Misol uchun `FaceIdActivity`. Activityni muvofaqiyatlik qo'shganimizdan keyin uni `FragmentActivity`dan extend olamiz.
+
+Чтобы добавить SDK в проект, необходимо создать специальное действие. Для этого в программе Android studio выберите `File > New > Activity > Empty activity` и добавьте новое действие. Мы называем деятельность. Например, `FragmentActivity`. После того, как мы успешно добавили действие, мы можем расширить его из `FragmentActivity`. 
+
 
 Kotlin
 ```kotlin
@@ -81,7 +83,7 @@ Java
 public class FaceIdActivity extends FragmentActivity {
 ```
 
-Shundan so'ng bir nechta o'zgaruvchilar yasaymiz
+После этого делаем несколько переменных 
 
 Kotlin
 ```kotlin
@@ -109,7 +111,7 @@ FlutterFragment flutterFragment;
 ...
 ```
 
-Fragmentni hamma eventlari SDKga borishi uchun quyidagi kodni qo'shib qo'yamiz:
+Мы добавим следующий код, чтобы все события фрагмента попадали в SDK:
 
 Kotlin
 ```kotlin
@@ -199,7 +201,7 @@ public void onTrimMemory(int level) {
 }
 ```
 
-SDKni ishga tushirish va undan kelgan javobni ushlab olish uchun quyidagi kodni ishlatamiz:
+Мы используем следующий код для запуска SDK и получения от него ответа:
 
 
 Kotlin 
@@ -292,8 +294,7 @@ private void setMethodChannels(FlutterEngine flutterEngine) {
 
 ```
 
-SDKni ishga tushirish va unga kerakli parametrlarni berib yuborish uchun qiydagi koddan foydalanamiz:
-
+Чтобы запустить SDK и отправить ему необходимые параметры, мы используем следующий код:
 
 Kotlin
 ``` kotlin
@@ -358,23 +359,26 @@ private void initFlutterEngine() {
 }
 ```
 
-`initFlutterEngine` funksiyada Uri orqali hamma parametrlarni SDKga berib yuboramiz.
-- client_id: siz uchun berilgan mahsus ID
-- redirect_uri: ulanish paytida malumot almashish URL manzili
-- scope: sizga kerakli bo'lgan ma'lumotlar guruhi ro'yhati
-- language: SDKni interfeys tili. Mavjud tillar 
-    - uz: O'zbekcha (lotin)
-    - ru: Ruscha
-    - en: Inglischa
-- scan_mode: yuzni skanerlash rejimi. `simple` yoki `strong` bo'lishi mumkun
-- user_hash: foydalanuvchini pasport ma'lumoti va tug'ilgan kunining hashi
-- passport: foydalanuvchining pasport raqami
-- birthday: foydalanuvchini tug'ilgan kuni
+В функции `initFlutterEngine` мы передаем все параметры в SDK через Uri.
+- `client_id`: специальный идентификатор, предоставленный вам
+- `redirect_uri`: URL для обмена данными во время подключения
+- `scope`: список необходимых вам групп данных
+- `language`: язык интерфейса SDK. Доступные языки
+     - `en`: Узбекский (латынь)
+     - `ru`: Русский
+     - `en`: Английский
+- `scan_mode`: режим сканирования лица. Он может быть `simple` или `strong`.
+- user_hash: паспортные данные пользователя и хеш дня рождения
+- паспорт: номер паспорта пользователя
+- birthday: день рождения пользователя
 
-! agar (`passport` va `birthday`) yoki `user_hash` to'gri formatda kiritilsa SDK pasport ma'lumotlarini so'rash oynasini ochmaydi.
 
-## SDKni chaqirish
-SDKni chaqirish uchun tepada yaratgan activityni chaqirish kerak xalos. Buning uchun:
+! если ввести (`passport` и `birthday`) или `user_hash` в правильном формате, SDK не откроет окно запроса паспортной информации. 
+
+
+## Вызовите SDK 
+Чтобы вызвать SDK, вам просто нужно вызвать действие, которое вы создали вверху. Для этого:
+
 
 Kotlin
 ```kotlin
@@ -404,7 +408,7 @@ button.setOnClickListener(new View.OnClickListener() {
 ...
 ```
 
-Kelgan ma'lumotni ushlab olish uchun esa `onActivityResult` dan foydalanamiz:
+Чтобы зафиксировать полученную информацию, мы используем `onActivityResult`:
 
 Kotlin
 ```kotlin
@@ -437,7 +441,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.
 }
 ```
 
-Olingan kodni server orqali foydalanuvchini hamma ma'lumotini olish imkoni bor
+Полученный код позволяет получить всю информацию о пользователе через сервер:
 
 ## Android manifest
 AndroidManifest.xml falni ochib ushbu permissionlarni qo'shib qo'yamiz
@@ -451,6 +455,8 @@ AndroidManifest.xml falni ochib ushbu permissionlarni qo'shib qo'yamiz
 ```
 
 Va FaceId Activityimizda klaviatura ishlatishda muommo bo'lmasligi uchun `android:windowSoftInputMode="adjustResize"` ni qo'shib qo'yamiz
+
+И мы добавляем `android:windowSoftInputMode="adjustResize"` к нашему FaceId Activity, чтобы не возникало проблем с использованием клавиатуры.
 
 ```xml
 <activity
