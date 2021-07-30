@@ -454,8 +454,6 @@ AndroidManifest.xml falni ochib ushbu permissionlarni qo'shib qo'yamiz
 <uses-permission android:name="android.permission.VIBRATE" />
 ```
 
-Va FaceId Activityimizda klaviatura ishlatishda muommo bo'lmasligi uchun `android:windowSoftInputMode="adjustResize"` ni qo'shib qo'yamiz
-
 И мы добавляем `android:windowSoftInputMode="adjustResize"` к нашему FaceId Activity, чтобы не возникало проблем с использованием клавиатуры.
 
 ```xml
