@@ -1,4 +1,4 @@
-![alt text](img/logo.png)
+![logo](img/logo.png)
 
 [o'zbekcha](README.md)
 
@@ -368,15 +368,15 @@ private void initFlutterEngine() {
      - `ru`: Русский
      - `en`: Английский
 - `scan_mode`: режим сканирования лица. Он может быть `simple` или `strong`.
-- user_hash: паспортные данные пользователя и хеш дня рождения
-- паспорт: номер паспорта пользователя
-- birthday: день рождения пользователя
+- `user_hash`: паспортные данные пользователя и хеш дня рождения
+- `passport`: номер паспорта пользователя
+- `birthday`: день рождения пользователя
 
 
 ! если ввести (`passport` и `birthday`) или `user_hash` в правильном формате, SDK не откроет окно запроса паспортной информации. 
 
 
-## Вызовите SDK 
+## Загрузка SDK 
 Чтобы вызвать SDK, вам просто нужно вызвать действие, которое вы создали вверху. Для этого:
 
 
@@ -462,3 +462,165 @@ AndroidManifest.xml falni ochib ushbu permissionlarni qo'shib qo'yamiz
     android:label="@string/title_activity_face_id"
     android:windowSoftInputMode="adjustResize"/>
 ```
+
+
+## Инструкция по взаимодействию информационной системы клиентов с информационной системой биометрической идентификации myid с помощью SDK
+
+После получения кода авторизации от mobile SDK в бэк энде на стороне клиента формируется запрос по URL `…/access-token` к oauth2 серверу myid для получения access token методом POST:
+
+```json
+{
+    "grant_type": "authorization_code", //отправить как в примере
+    "code": "code", //код, полученный с помощью SDK 
+    "client_id": "CLIENT_ID", //идентификатор клиента (предоставляется администратором myid или получается из консоли администратора организации)
+    "client_secret": "CLIENT_SECRET", //секрет клиента (предоставляется администратором myid или получается из консоли администратора организации)
+    "redirect_uri": "REDIRECT_URI", // URL перенаправления клиента
+}
+```
+
+`Не допускается сохранение и отправка client_secret в мобильном приложении, сохранение и направление запросов с использованием client_secret должны осуществляться исключительно из бэк энда приложения.`
+
+В ответ oauth 2 сервер myid возвращает клиенту токен доступа и токен обновления
+
+```json
+{
+    "expires_in": "3599",
+    "access_token": "here access token",
+    "refresh_token": "here refresh token"
+}
+```
+
+Затем клиент направляет GET запрос на адрес …users/me, указав следующие параметры в заголовке (header) запроса:
+
+`Authorization: Bearer [полученный access_token]`
+
+В результате данного запроса будут получены данные пользователя в следующем виде. 
+
+```json
+{
+  "profile": {
+    "common_data": {
+      "first_name": "string",
+      "middle_name": "string",
+      "last_name": "string",
+      "pinfl": "string",
+      "inn": "string",
+      "gender": "string",
+      "birth_place": "string",
+      "birth_country": "string",
+      "birth_date": "string",
+      "nationality": "string",
+      "citizenship": "string",
+      "sdk_hash": "string"
+    },
+    "doc_data": {
+      "pass_data": "string",
+      "issued_by": "string",
+      "issued_date": "string",
+      "expiry_date": "string"
+    },
+    "contacts": {
+      "phone": "string",
+      "email": "user@example.com"
+    },
+    "address": {
+      "permanent_address": "string",
+      "temporary_address": "string",
+      "permanent_registration": {
+        "RegionID": "string",
+        "RegionValue": "string",
+        "CountryID": "string",
+        "CountryValue": "string",
+        "DistrictID": "string",
+        "DistrictValue": "string",
+        "RegistrationDate": "string",
+        "Adress": "string"
+      },
+      "temporary_registration": {
+        "RegionID": "string",
+        "RegionValue": "string",
+        "CountryID": "string",
+        "CountryValue": "string",
+        "DistrictID": "string",
+        "DistrictValue": "string",
+        "DateFrom": "string",
+        "RegistrationDate": "string",
+        "DateTill": "string",
+        "Adress": "string"
+      }
+    },
+    "authentication_method": "string"
+  }
+}
+```
+
+Для обновления access token используется метод (POST) 
+`…/refresh-token` в котором направляются следующие параметры запроса:
+
+```json
+{
+    "refresh_toke": "here refresh_token",
+    "client_id": "here client_id",
+    "client_secret": "here client_secret",
+}
+```
+
+В ответ на запрос возвращаются следующие параметры:
+
+```json
+{
+    "access_token": "here access_token",
+    "expires_in": "1359",
+    "token_type": "bearer",
+}
+```
+
+### Описание полей
+
+| Параметр               | Описание |
+| ---------------------- | ------------ |
+| first\_name            | Имя                                                                                                                                                                        |
+| middle\_name           | Отчество                                                                                                                                                                   |
+| last\_name             | Фамилия                                                                                                                                                                    |
+| pinfl                  | Персональный идентификационной номер физического лица                                                                                                                      |
+| inn                    | Идентификационной номер налогоплательщика                                                                                                                                  |
+| gender                 | 1-Мужчина, 2- Женщина                                                                                                                                                      |
+| birth\_place           | Место рождения                                                                                                                                                             |
+| birth\_country         | Страна рождения                                                                                                                                                            |
+| birth\_date            | Дата рождения                                                                                                                                                              |
+| nationality            | Национальность                                                                                                                                                             |
+| citizenship            | Гражданство                                                                                                                                                                |
+| sdk\_hash              | Хэш код, который можно направить в последующих запросах в SDK(вместо реквизитов документа, удостоверяющего личность и даты рождения) в целях получения данных пользователя |
+| pass\_data             | Серия и номер документа, удостоверяющего личность                                                                                                                          |
+| issued\_by             | Место выдачи документа, удостоверяющего личность                                                                                                                           |
+| issued\_date           | Дата выдачи документа, удостоверяющего личность                                                                                                                            |
+| expiry\_date           | Срок действия документа, удостоверяющего личность                                                                                                                          |
+| phone                  | Номер телефона                                                                                                                                                             |
+| email                  | Адрес электронной почты                                                                                                                                                    |
+| permanent\_address     | Адрес постоянной регистрации                                                                                                                                               |
+| temporary\_address     | Адрес временной регистрации                                                                                                                                                |
+| PermanentRegistration  |
+| RegionID               | Идентификационной номер региона                                                                                                                                            |
+| RegionValue            | Значение региона                                                                                                                                                           |
+| CountryID              | Идентификационный номер страны                                                                                                                                             |
+| CountryValue           | Значение страны                                                                                                                                                            |
+| DistrictID             | Идентификационный номер района (города)                                                                                                                                    |
+| DistrictValue          | Значение района (города)                                                                                                                                                   |
+| RegistrationDate       | Дата регистрации                                                                                                                                                           |
+| Adress                 | Адрес                                                                                                                                                                      |
+| TemproaryRegistrations |
+| RegionID               | Идентификационной номер региона                                                                                                                                            |
+| RegionValue            | Значение региона                                                                                                                                                           |
+| CountryID              | Идентификационный номер страны                                                                                                                                             |
+| CountryValue           | Значение страны                                                                                                                                                            |
+| DistrictID             | Идентификационный номер района (города)                                                                                                                                    |
+| DistrictValue          | Значение района (города)                                                                                                                                                   |
+| DateFrom               | Дата начала регистрации                                                                                                                                                    |
+| DateTill               | Дата окончания регистрации                                                                                                                                                 |
+| Adress                 | Адрес                                                                                                                                                                      |
+| authentication\_method | Метод аутентификации (simple, strong) 
+
+
+### Схема взаимодействия клиента с сервером OAUTH 2.0 myid
+
+![scheme preview](img/oauth_scheme.png)
