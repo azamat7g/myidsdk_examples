@@ -458,3 +458,162 @@ Va FaceId Activityimizda klaviatura ishlatishda muommo bo'lmasligi uchun `androi
     android:label="@string/title_activity_face_id"
     android:windowSoftInputMode="adjustResize"/>
 ```
+
+## SDK yordamida mijoz axborot tizimi bilan MyID biometrik identifikasiya axborot tizimi o‘rtasida o‘zaro ma'lumot almashishni yo‘lga qo‘yish uchun qo‘llanma
+
+SDK yordamida mijoz axborot tizimi bilan MyID biometrik identifikasiya axborot tizimi o‘rtasida o‘zaro ma'lumot almashishni yo‘lga qo‘yish uchun qo‘llanma
+
+```json
+{
+    "grant_type": "authorization_code", //misolda keltirilgandek jo‘natish kerak
+    "code": "code", //SDK orqali olingan kod
+    "client_id": "CLIENT_ID", //mijoz identifikatori (myid administratori tomonidan taqdim etiladi yoki mijoz konsoli orqali olinadi)
+    "client_secret": "CLIENT_SECRET", //mijoz sekreti (myid administratori tomonidan taqdim etiladi yoki mijoz konsoli orqali olinadi)
+    "redirect_uri": "REDIRECT_URI", // mijoz tomonidan taqdim etiladigan qayta yo‘naltirish URL manzili
+}
+```
+
+`Mobil ilova orqali client_secret parametrini saqlash yoki jo‘natish ta'qiqlanadi, client_secret orqali yuboriladigan so‘rovlar faqatgina back end tomonida amalga oshirilishi kerak.`
+
+Javob tariqasida myid oauth 2.0 serveri mijozga token va yangilash tokenini taqdim etadi.
+
+```json
+{
+  "token_type": "Bearer",
+  "expires_in": "3599",
+  "access_token": "here access token",
+  "refresh_token": "here refresh token"
+}
+```
+
+So‘ng, mijoz GET metodi orqali `…users/me` manziliga quyidagi so‘rov jo‘natadi:
+
+`Authorization: Bearer [access_token]`
+
+So‘rov natijasida foydalanuvchining ma'lumotlari quyidagi ko‘rinishda taqdim etiladi.
+
+```json
+{
+  "profile": {
+    "common_data": {
+      "first_name": "string",
+      "middle_name": "string",
+      "last_name": "string",
+      "pinfl": "string",
+      "inn": "string",
+      "gender": "string",
+      "birth_place": "string",
+      "birth_country": "string",
+      "birth_date": "string",
+      "nationality": "string",
+      "citizenship": "string",
+      "sdk_hash": "string"
+    },
+    "doc_data": {
+      "pass_data": "string",
+      "issued_by": "string",
+      "issued_date": "string",
+      "expiry_date": "string"
+    },
+    "contacts": {
+      "phone": "string",
+      "email": "user@example.com"
+    },
+    "address": {
+      "permanent_address": "string",
+      "temporary_address": "string",
+      "permanent_registration": {
+        "RegionID": "string",
+        "RegionValue": "string",
+        "CountryID": "string",
+        "CountryValue": "string",
+        "DistrictID": "string",
+        "DistrictValue": "string",
+        "RegistrationDate": "string",
+        "Adress": "string"
+      },
+      "temporary_registration": {
+        "RegionID": "string",
+        "RegionValue": "string",
+        "CountryID": "string",
+        "CountryValue": "string",
+        "DistrictID": "string",
+        "DistrictValue": "string",
+        "DateFrom": "string",
+        "RegistrationDate": "string",
+        "DateTill": "string",
+        "Adress": "string"
+      }
+    },
+    "authentication_method": "string"
+  }
+}
+```
+
+Access token yangilash uchun POST metodi bilan `…oauth2/refresh-token` manziliga quyidagi so‘rov jo‘natiladi:
+
+```json
+{
+  "refresh_toke": "here refresh_token",
+  "client_id": "here client_id",
+  "client_secret": "here client_secret"
+}
+```
+
+So‘rovga javob quyidagi ko‘rinishda keladi:
+
+```json
+{
+  "access_token": "here access_token",
+  "expires_in": "1359",
+  "token_type": "bearer",
+  "refresh_token": "here refresh_token"
+}
+```
+
+| Parametr               | Tavsif                                                                                                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| first\_name            | Ism                                                                                                                                                                 |
+| middle\_name           | Otasining ismi                                                                                                                                                      |
+| last\_name             | Familiya                                                                                                                                                            |
+| pinfl                  | Jismoniy shaxsning shaxsiy identifikasion raqami                                                                                                                    |
+| inn                    | Soliq to‘lovchining identifikasion raqami                                                                                                                           |
+| gender                 | 1-Erkak, 2- Ayol                                                                                                                                                    |
+| birth\_place           | Tug‘ilgan joyi                                                                                                                                                      |
+| birth\_country         | Tug‘ilgan davlat                                                                                                                                                    |
+| birth\_date            | Tug‘ilgan sanasi                                                                                                                                                    |
+| nationality            | Millati                                                                                                                                                             |
+| citizenship            | Fuqaroligi                                                                                                                                                          |
+| sdk\_hash              | Keyingi so‘rovlarda SDKga shaxsni tasdiqlovchi hujjat va tug‘ilganlik sanasining o‘rniga yuborib, foydalanuvchining ma'lumotlarini olish imkonini beruvchi xesh kod |
+| pass\_data             | Shaxsni tasdiqlovchi hujjatning seriyasi va raqami                                                                                                                  |
+| issued\_by             | Shaxsni tasdiqlovchi hujjat berilgan joyi                                                                                                                           |
+| issued\_date           | Shaxsni tasdiqlovchi hujjatning berilgan sanasi                                                                                                                     |
+| expiry\_date           | Shaxsni tasdiqlovchi hujjatning amal qilish muddati                                                                                                                 |
+| phone                  | Telefon raqami                                                                                                                                                      |
+| email                  | Elektron pochta manzili                                                                                                                                             |
+| permanent\_address     | Doimiy ro‘yhatdan o‘tish joyi                                                                                                                                       |
+| temporary\_address     | Vaqtinchalik ro‘yhatdan o‘tish joyi                                                                                                                                 |
+| PermanentRegistration  |
+| RegionID               | Viloyat identifikasiya raqami                                                                                                                                       |
+| RegionValue            | Viloyat nomi                                                                                                                                                        |
+| CountryID              | Davlat identifikasion raqami                                                                                                                                        |
+| CountryValue           | Davlat nomi                                                                                                                                                         |
+| DistrictID             | Tuman (shahar) identifikasion raqami                                                                                                                                |
+| DistrictValue          | Tuman (shaxar) nomi                                                                                                                                                 |
+| RegistrationDate       | Ro‘yhatdan o‘tish sanasi                                                                                                                                            |
+| Adress                 | Manzil                                                                                                                                                              |
+| TemproaryRegistrations |
+| RegionID               | Viloyat identifikasiya raqami                                                                                                                                       |
+| RegionValue            | Viloyat nomi                                                                                                                                                        |
+| CountryID              | Davlat identifikasion raqami                                                                                                                                        |
+| CountryValue           | Davlat nomi                                                                                                                                                         |
+| DistrictID             | Tuman (shahar) identifikasion raqami                                                                                                                                |
+| DistrictValue          | Tuman (shaxar) nomi                                                                                                                                                 |
+| DateFrom               | Ro‘yhatdan o‘tgan sana                                                                                                                                              |
+| DateTill               | Ro‘yhat amal qilish muddati                                                                                                                                         |
+| Adress                 | Manzil                                                                                                                                                              |
+| authentication\_method | Autentifikasiya metodi (simple, strong)     
+
+### Mijozning MyID OAUTH 2.0 serveri bilan o‘zaro ma'lumot almashish sxemasi
+
+![scheme preview](img/oauth_scheme.png)

@@ -444,7 +444,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.
 Полученный код позволяет получить всю информацию о пользователе через сервер:
 
 ## Android manifest
-AndroidManifest.xml falni ochib ushbu permissionlarni qo'shib qo'yamiz
+Открываем файл AndroidManifest.xml и добавляем следующий код
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET"/>
