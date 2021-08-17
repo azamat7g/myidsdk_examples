@@ -40,7 +40,7 @@ android {
 dependencies {
     ...
 
-    implementation 'uz.uzinfocom.myidsdk:flutter_release:1.0'
+    implementation 'uz.uzinfocom.myidsdk:flutter_release:$VERSION'
 }
 ```
 
