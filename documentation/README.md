@@ -571,48 +571,55 @@ So‘rovga javob quyidagi ko‘rinishda keladi:
 }
 ```
 
-| Parametr               | Tavsif                                                                                                                                                              |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| first\_name            | Ism                                                                                                                                                                 |
-| middle\_name           | Otasining ismi                                                                                                                                                      |
-| last\_name             | Familiya                                                                                                                                                            |
-| pinfl                  | Jismoniy shaxsning shaxsiy identifikasion raqami                                                                                                                    |
-| inn                    | Soliq to‘lovchining identifikasion raqami                                                                                                                           |
-| gender                 | 1-Erkak, 2- Ayol                                                                                                                                                    |
-| birth\_place           | Tug‘ilgan joyi                                                                                                                                                      |
-| birth\_country         | Tug‘ilgan davlat                                                                                                                                                    |
-| birth\_date            | Tug‘ilgan sanasi                                                                                                                                                    |
-| nationality            | Millati                                                                                                                                                             |
-| citizenship            | Fuqaroligi                                                                                                                                                          |
-| sdk\_hash              | Keyingi so‘rovlarda SDKga shaxsni tasdiqlovchi hujjat va tug‘ilganlik sanasining o‘rniga yuborib, foydalanuvchining ma'lumotlarini olish imkonini beruvchi xesh kod |
-| pass\_data             | Shaxsni tasdiqlovchi hujjatning seriyasi va raqami                                                                                                                  |
-| issued\_by             | Shaxsni tasdiqlovchi hujjat berilgan joyi                                                                                                                           |
-| issued\_date           | Shaxsni tasdiqlovchi hujjatning berilgan sanasi                                                                                                                     |
-| expiry\_date           | Shaxsni tasdiqlovchi hujjatning amal qilish muddati                                                                                                                 |
-| phone                  | Telefon raqami                                                                                                                                                      |
-| email                  | Elektron pochta manzili                                                                                                                                             |
-| permanent\_address     | Doimiy ro‘yhatdan o‘tish joyi                                                                                                                                       |
-| temporary\_address     | Vaqtinchalik ro‘yhatdan o‘tish joyi                                                                                                                                 |
-| PermanentRegistration  |
-| RegionID               | Viloyat identifikasiya raqami                                                                                                                                       |
-| RegionValue            | Viloyat nomi                                                                                                                                                        |
-| CountryID              | Davlat identifikasion raqami                                                                                                                                        |
-| CountryValue           | Davlat nomi                                                                                                                                                         |
-| DistrictID             | Tuman (shahar) identifikasion raqami                                                                                                                                |
-| DistrictValue          | Tuman (shaxar) nomi                                                                                                                                                 |
-| RegistrationDate       | Ro‘yhatdan o‘tish sanasi                                                                                                                                            |
-| Adress                 | Manzil                                                                                                                                                              |
-| TemproaryRegistrations |
-| RegionID               | Viloyat identifikasiya raqami                                                                                                                                       |
-| RegionValue            | Viloyat nomi                                                                                                                                                        |
-| CountryID              | Davlat identifikasion raqami                                                                                                                                        |
-| CountryValue           | Davlat nomi                                                                                                                                                         |
-| DistrictID             | Tuman (shahar) identifikasion raqami                                                                                                                                |
-| DistrictValue          | Tuman (shaxar) nomi                                                                                                                                                 |
-| DateFrom               | Ro‘yhatdan o‘tgan sana                                                                                                                                              |
-| DateTill               | Ro‘yhat amal qilish muddati                                                                                                                                         |
-| Adress                 | Manzil                                                                                                                                                              |
-| authentication\_method | Autentifikasiya metodi (simple, strong)     
+| Parametr               | Tavsif                                                                                                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| first\_name              | Ism                                                                                                                                                                 |
+| middle\_name             | Otasining ismi                                                                                                                                                      |
+| last\_name               | Familiya                                                                                                                                                            |
+| pinfl                    | Jismoniy shaxsning shaxsiy identifikasion raqami                                                                                                                    |
+| inn                      | Soliq to‘lovchining identifikasion raqami                                                                                                                           |
+| gender                   | 1-Erkak, 2- Ayol                                                                                                                                                    |
+| birth\_place             | Tug‘ilgan joyi                                                                                                                                                      |
+| birth\_country           | Tug‘ilgan davlat                                                                                                                                                    |
+| birth\_country\_id       | Tug'ilgan joy ID si                                                                                                                                                 |
+| birth\_date              | Tug‘ilgan sanasi                                                                                                                                                    |
+| nationality              | Millati                                                                                                                                                             |
+| nationality\_id          | Millat IDsi                                                                                                                                                         |
+| citizenship              | Fuqaroligi                                                                                                                                                          |
+| citizenship\_id          | Fuqarolik IDsi                                                                                                                                                      |
+| sdk\_hash                | Keyingi so‘rovlarda SDKga shaxsni tasdiqlovchi hujjat va tug‘ilganlik sanasining o‘rniga yuborib, foydalanuvchining ma'lumotlarini olish imkonini beruvchi xesh kod |
+| pass\_data               | Shaxsni tasdiqlovchi hujjatning seriyasi va raqami                                                                                                                  |
+| issued\_by               | Shaxsni tasdiqlovchi hujjat berilgan joyi                                                                                                                           |
+| issued\_by\_id           | Shaxsni tasdiqlovchi hujjat berilgan joy IDsi                                                                                                                       |
+| issued\_date             | Shaxsni tasdiqlovchi hujjatning berilgan sanasi                                                                                                                     |
+| expiry\_date             | Shaxsni tasdiqlovchi hujjatning amal qilish muddati                                                                                                                 |
+| last\_update\_pass\_data | Tizimda shaxsni tasdiqlovchi hujjat oxirgi yangilangan sanasi va vaqti                                                                                              |
+| last\_update\_inn        | Tizimda soliq to'lovchining identifikatsion raqami oxirgi yangilangan sanasi va vaqti                                                                               |
+| last\_update\_address    | Tizimda shaxs ro'yxatdan o'tgan manzilining oxirgi yangilangan sanasi va vaqti                                                                                      |
+| phone                    | Telefon raqami                                                                                                                                                      |
+| email                    | Elektron pochta manzili                                                                                                                                             |
+| permanent\_address       | Doimiy ro‘yhatdan o‘tish joyi                                                                                                                                       |
+| temporary\_address       | Vaqtinchalik ro‘yhatdan o‘tish joyi                                                                                                                                 |
+| PermanentRegistration    |
+| RegionID                 | Viloyat identifikasiya raqami                                                                                                                                       |
+| RegionValue              | Viloyat nomi                                                                                                                                                        |
+| CountryID                | Davlat identifikasion raqami                                                                                                                                        |
+| CountryValue             | Davlat nomi                                                                                                                                                         |
+| DistrictID               | Tuman (shahar) identifikasion raqami                                                                                                                                |
+| DistrictValue            | Tuman (shaxar) nomi                                                                                                                                                 |
+| RegistrationDate         | Ro‘yhatdan o‘tish sanasi                                                                                                                                            |
+| Adress                   | Manzil                                                                                                                                                              |
+| TemproaryRegistrations   |
+| RegionID                 | Viloyat identifikasiya raqami                                                                                                                                       |
+| RegionValue              | Viloyat nomi                                                                                                                                                        |
+| CountryID                | Davlat identifikasion raqami                                                                                                                                        |
+| CountryValue             | Davlat nomi                                                                                                                                                         |
+| DistrictID               | Tuman (shahar) identifikasion raqami                                                                                                                                |
+| DistrictValue            | Tuman (shaxar) nomi                                                                                                                                                 |
+| DateFrom                 | Ro‘yhatdan o‘tgan sana                                                                                                                                              |
+| DateTill                 | Ro‘yhat amal qilish muddati                                                                                                                                         |
+| Adress                   | Manzil                                                                                                                                                              |
+| authentication\_method   | Autentifikasiya metodi (simple, strong) 
 
 ### Mijozning MyID OAUTH 2.0 serveri bilan o‘zaro ma'lumot almashish sxemasi
 
