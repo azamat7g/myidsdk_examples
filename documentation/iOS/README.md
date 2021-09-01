@@ -44,7 +44,7 @@ import Flutter
 import FlutterPluginRegistrant
 ```
 
-SDKni chaqirib beradigan fuksiya:
+SDKni chaqirib beradigan funksiya:
 
 ``` swift
 func loadEngine() {
