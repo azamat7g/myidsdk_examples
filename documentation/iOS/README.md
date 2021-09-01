@@ -37,7 +37,7 @@ SDK jiltidagi `FlutterPluginRegistrant.xcframework` dan tashqari hamma narsani `
 
 ## SDKni ishga tushirish
 
-ViewController faylni ochamiz va ushbu kutibxonalarni import qilamiz
+ViewController faylni ochamiz va ushbu kutubxonalarni import qilamiz
 
 ``` swift
 import Flutter
