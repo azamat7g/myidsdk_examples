@@ -1,4 +1,4 @@
-![logo](img/logo.png)
+![logo](../img/logo.png)
 
 [o'zbekcha](README.md)
 
@@ -630,4 +630,4 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.
 
 ### Схема взаимодействия клиента с сервером OAUTH 2.0 myid
 
-![scheme preview](img/oauth_scheme.png)
+![scheme preview](../img/oauth_scheme.png)

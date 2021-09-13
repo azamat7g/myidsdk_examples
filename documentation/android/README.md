@@ -1,4 +1,4 @@
-![alt text](img/logo.png)
+![logo](../img/logo.png)
 
 [русский](README.ru.md)
 
@@ -623,4 +623,4 @@ So‘rovga javob quyidagi ko‘rinishda keladi:
 
 ### Mijozning MyID OAUTH 2.0 serveri bilan o‘zaro ma'lumot almashish sxemasi
 
-![scheme preview](img/oauth_scheme.png)
+![scheme preview](../img/oauth_scheme.png)

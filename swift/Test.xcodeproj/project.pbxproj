@@ -427,10 +427,7 @@
 		};
 		030663D726DF52CD006A175E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8EC6FD1AB56E85ACD1363A4 /* Pods-Test.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86VMSY4FK5;
 				FRAMEWORK_SEARCH_PATHS = (

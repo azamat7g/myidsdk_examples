@@ -1,4 +1,4 @@
-![logo](img/logo.png)
+![logo](../img/logo.png)
 
 # myID SDK
 MyID – bu O'zbekistonda masofaviy identifikatsiyalashning eng oson, qulay va ishonchli usuli.
@@ -25,26 +25,26 @@ iOS loyihada SDKni ulashdan oldin loyihani minimum iOS versiyasini 11ga almashti
 
 SDK jiltidagi `FlutterPluginRegistrant.xcframework` dan tashqari hamma narsani `General` > `Frameworks Libraries, and Embeded Content` qismiga Drag and Drop usuli orqali qo'shamiz. 
 
-![iOS 1](img/iOS_1.png)
+![iOS 1](../img/iOS_1.png)
 
 `Build Phases` > `Link Binary With Libraries` qismiga `FlutterPluginRegistrant.xcframework` ni qo'shamiz.
 
-![iOS 2](img/iOS_2.png)
+![iOS 2](../img/iOS_2.png)
 
 `Build Settings` > `Framework Search Paths` qismiga SDKni linkini (`$(PROJECT_DIR)/myID/`) qo'shib qo'yamiz.
 
-![iOS 3](img/iOS_3.png)
+![iOS 3](../img/iOS_3.png)
 
 ## SDKni ishga tushirish
 
-ViewController faylni ochamiz va ushbu kutibxonalarni import qilamiz
+ViewController faylni ochamiz va ushbu kutubxonalarni import qilamiz
 
 ``` swift
 import Flutter
 import FlutterPluginRegistrant
 ```
 
-SDKni chaqirib beradigan fuksiya:
+SDKni chaqirib beradigan funksiya:
 
 ``` swift
 func loadEngine() {
@@ -251,4 +251,4 @@ So‘rovga javob quyidagi ko‘rinishda keladi:
 
 ### Mijozning MyID OAUTH 2.0 serveri bilan o‘zaro ma'lumot almashish sxemasi
 
-![scheme preview](img/oauth_scheme.png)
+![scheme preview](../img/oauth_scheme.png)
