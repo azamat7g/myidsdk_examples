@@ -16,24 +16,40 @@ iOS loyihada SDKni ulashdan oldin loyihani minimum iOS versiyasini 11ga almashti
 ├── Project
 ├── Project.xcodeproj
 └── myID
-    ├── Flutter.xcframework
     ├── App.xcframework
     ├── FlutterPluginRegistrant.xcframework
     ├── camera.xcframework
     └── ...
 ```
 
-SDK jiltidagi `FlutterPluginRegistrant.xcframework` dan tashqari hamma narsani `General` > `Frameworks Libraries, and Embeded Content` qismiga Drag and Drop usuli orqali qo'shamiz. 
+`Podfile` ni ichiga quyidagi kutubxonalarni ulaymiz
+
+```
+pod 'Flutter', :podspec => './myID/Flutter.podspec'
+pod 'GoogleMLKit/FaceDetection', '~> 2.2.0'
+pod 'GoogleMLKit/TextRecognition', '~> 2.2.0'
+```
+
+`pod install` buyug'ini ishga tushuramiz
+
+SDK jiltidagi `FlutterPluginRegistrant.xcframework` va `ml_vision.xcframework` dan tashqari hamma narsani `General` > `Frameworks Libraries, and Embeded Content` qismiga Drag and Drop usuli orqali qo'shamiz. 
 
 ![iOS 1](../img/iOS_1.png)
 
-`Build Phases` > `Link Binary With Libraries` qismiga `FlutterPluginRegistrant.xcframework` ni qo'shamiz.
+`Build Phases` > `Link Binary With Libraries` qismiga `FlutterPluginRegistrant.xcframework`ni va `ml_vision.xcframework`ni qo'shamiz.
 
 ![iOS 2](../img/iOS_2.png)
 
 `Build Settings` > `Framework Search Paths` qismiga SDKni linkini (`$(PROJECT_DIR)/myID/`) qo'shib qo'yamiz.
 
 ![iOS 3](../img/iOS_3.png)
+
+va sdk orqali qurilma kamerasiga ruxsat olish uchun info.plist faylga quyidagi ruxsatni qo'shib qo'yamiz
+
+```
+<key>NSCameraUsageDescription</key>
+<string>Your description</string>
+```
 
 ## SDKni ishga tushirish
 
@@ -55,6 +71,7 @@ func loadEngine() {
             URLQueryItem(name: "redirect_uri", value: __REDIRECT_URL__),
             URLQueryItem(name: "scope", value: "address,contacts,doc_data,common_data"),
             URLQueryItem(name: "language", value: "uz"),
+            URLQueryItem(name: "scan_mode", value: self.scanMode.isOn ? "strong" : "simple"),
             // URLQueryItem(name: "passport", value: "AA1234567"),
             // URLQueryItem(name: "birthday", value: "01.01.2000"),
             // URLQueryItem(name: "user_hash", value: "1234567891234567"),

@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                 URLQueryItem(name: "redirect_uri", value: __REDIRECT_URL__),
                 URLQueryItem(name: "scope", value: "address,contacts,doc_data,common_data"),
                 URLQueryItem(name: "language", value: "uz"),
-                URLQueryItem(name: "scan_mode", value: self.scanMode.isOn ? "strong" : "simple;"),
+                URLQueryItem(name: "scan_mode", value: self.scanMode.isOn ? "strong" : "simple"),
 //                URLQueryItem(name: "passport", value: "AA1234567"),
 //                URLQueryItem(name: "birthday", value: "01.01.2000"),
 //                URLQueryItem(name: "user_hash", value: "1234567891234567"),
