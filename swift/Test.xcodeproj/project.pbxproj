@@ -13,25 +13,21 @@
 		030663CD26DF52CA006A175E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030663CB26DF52CA006A175E /* Main.storyboard */; };
 		030663CF26DF52CD006A175E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030663CE26DF52CD006A175E /* Assets.xcassets */; };
 		030663D226DF52CD006A175E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030663D026DF52CD006A175E /* LaunchScreen.storyboard */; };
-		030663E326DF535B006A175E /* camera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DA26DF535B006A175E /* camera.xcframework */; };
-		030663E426DF535B006A175E /* camera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DA26DF535B006A175E /* camera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663E526DF535B006A175E /* native_device_orientation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DB26DF535B006A175E /* native_device_orientation.xcframework */; };
-		030663E626DF535B006A175E /* native_device_orientation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DB26DF535B006A175E /* native_device_orientation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663E726DF535B006A175E /* package_info.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DC26DF535B006A175E /* package_info.xcframework */; };
-		030663E826DF535B006A175E /* package_info.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DC26DF535B006A175E /* package_info.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663E926DF535B006A175E /* device_info.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DD26DF535B006A175E /* device_info.xcframework */; };
-		030663EA26DF535B006A175E /* device_info.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DD26DF535B006A175E /* device_info.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663EB26DF535B006A175E /* App.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DE26DF535B006A175E /* App.xcframework */; };
-		030663EC26DF535B006A175E /* App.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DE26DF535B006A175E /* App.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663ED26DF535B006A175E /* Reachability.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DF26DF535B006A175E /* Reachability.xcframework */; };
-		030663EE26DF535B006A175E /* Reachability.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663DF26DF535B006A175E /* Reachability.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663EF26DF535B006A175E /* url_launcher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663E026DF535B006A175E /* url_launcher.xcframework */; };
-		030663F026DF535B006A175E /* url_launcher.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663E026DF535B006A175E /* url_launcher.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663F126DF535B006A175E /* connectivity.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663E126DF535B006A175E /* connectivity.xcframework */; };
-		030663F226DF535B006A175E /* connectivity.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663E126DF535B006A175E /* connectivity.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663F326DF535B006A175E /* Flutter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663E226DF535B006A175E /* Flutter.xcframework */; };
-		030663F426DF535B006A175E /* Flutter.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 030663E226DF535B006A175E /* Flutter.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		030663F926DF59CB006A175E /* FlutterPluginRegistrant.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030663F826DF59CB006A175E /* FlutterPluginRegistrant.xcframework */; };
+		03A0909826EF7FF800BD7630 /* device_info.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909226EF7FF700BD7630 /* device_info.xcframework */; };
+		03A0909926EF7FF800BD7630 /* device_info.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909226EF7FF700BD7630 /* device_info.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03A0909A26EF7FF800BD7630 /* camera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909326EF7FF700BD7630 /* camera.xcframework */; };
+		03A0909B26EF7FF800BD7630 /* camera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909326EF7FF700BD7630 /* camera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03A0909C26EF7FF800BD7630 /* native_device_orientation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909426EF7FF700BD7630 /* native_device_orientation.xcframework */; };
+		03A0909D26EF7FF800BD7630 /* native_device_orientation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909426EF7FF700BD7630 /* native_device_orientation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03A0909E26EF7FF800BD7630 /* package_info.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909526EF7FF700BD7630 /* package_info.xcframework */; };
+		03A0909F26EF7FF800BD7630 /* package_info.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909526EF7FF700BD7630 /* package_info.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03A090A026EF7FF800BD7630 /* url_launcher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909626EF7FF700BD7630 /* url_launcher.xcframework */; };
+		03A090A126EF7FF800BD7630 /* url_launcher.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909626EF7FF700BD7630 /* url_launcher.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03A090A226EF7FF800BD7630 /* App.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909726EF7FF700BD7630 /* App.xcframework */; };
+		03A090A326EF7FF800BD7630 /* App.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03A0909726EF7FF700BD7630 /* App.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03A090A626EF800200BD7630 /* ml_vision.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A090A426EF800200BD7630 /* ml_vision.xcframework */; };
+		03A090A726EF800200BD7630 /* FlutterPluginRegistrant.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A090A526EF800200BD7630 /* FlutterPluginRegistrant.xcframework */; };
+		855B9B59C5104F1CFEA3FE93 /* Pods_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939E2BDBDD588BD6F57E1E95 /* Pods_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,15 +37,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				030663EE26DF535B006A175E /* Reachability.xcframework in Embed Frameworks */,
-				030663E426DF535B006A175E /* camera.xcframework in Embed Frameworks */,
-				030663EA26DF535B006A175E /* device_info.xcframework in Embed Frameworks */,
-				030663F026DF535B006A175E /* url_launcher.xcframework in Embed Frameworks */,
-				030663EC26DF535B006A175E /* App.xcframework in Embed Frameworks */,
-				030663E826DF535B006A175E /* package_info.xcframework in Embed Frameworks */,
-				030663F426DF535B006A175E /* Flutter.xcframework in Embed Frameworks */,
-				030663F226DF535B006A175E /* connectivity.xcframework in Embed Frameworks */,
-				030663E626DF535B006A175E /* native_device_orientation.xcframework in Embed Frameworks */,
+				03A090A126EF7FF800BD7630 /* url_launcher.xcframework in Embed Frameworks */,
+				03A0909D26EF7FF800BD7630 /* native_device_orientation.xcframework in Embed Frameworks */,
+				03A0909B26EF7FF800BD7630 /* camera.xcframework in Embed Frameworks */,
+				03A0909F26EF7FF800BD7630 /* package_info.xcframework in Embed Frameworks */,
+				03A0909926EF7FF800BD7630 /* device_info.xcframework in Embed Frameworks */,
+				03A090A326EF7FF800BD7630 /* App.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,16 +58,17 @@
 		030663CE26DF52CD006A175E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030663D126DF52CD006A175E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030663D326DF52CD006A175E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		030663DA26DF535B006A175E /* camera.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = camera.xcframework; path = myID/camera.xcframework; sourceTree = "<group>"; };
-		030663DB26DF535B006A175E /* native_device_orientation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = native_device_orientation.xcframework; path = myID/native_device_orientation.xcframework; sourceTree = "<group>"; };
-		030663DC26DF535B006A175E /* package_info.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = package_info.xcframework; path = myID/package_info.xcframework; sourceTree = "<group>"; };
-		030663DD26DF535B006A175E /* device_info.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = device_info.xcframework; path = myID/device_info.xcframework; sourceTree = "<group>"; };
-		030663DE26DF535B006A175E /* App.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = App.xcframework; path = myID/App.xcframework; sourceTree = "<group>"; };
-		030663DF26DF535B006A175E /* Reachability.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Reachability.xcframework; path = myID/Reachability.xcframework; sourceTree = "<group>"; };
-		030663E026DF535B006A175E /* url_launcher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = url_launcher.xcframework; path = myID/url_launcher.xcframework; sourceTree = "<group>"; };
-		030663E126DF535B006A175E /* connectivity.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = connectivity.xcframework; path = myID/connectivity.xcframework; sourceTree = "<group>"; };
-		030663E226DF535B006A175E /* Flutter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Flutter.xcframework; path = myID/Flutter.xcframework; sourceTree = "<group>"; };
-		030663F826DF59CB006A175E /* FlutterPluginRegistrant.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlutterPluginRegistrant.xcframework; path = myID/FlutterPluginRegistrant.xcframework; sourceTree = "<group>"; };
+		03A0909226EF7FF700BD7630 /* device_info.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = device_info.xcframework; path = myID/device_info.xcframework; sourceTree = "<group>"; };
+		03A0909326EF7FF700BD7630 /* camera.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = camera.xcframework; path = myID/camera.xcframework; sourceTree = "<group>"; };
+		03A0909426EF7FF700BD7630 /* native_device_orientation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = native_device_orientation.xcframework; path = myID/native_device_orientation.xcframework; sourceTree = "<group>"; };
+		03A0909526EF7FF700BD7630 /* package_info.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = package_info.xcframework; path = myID/package_info.xcframework; sourceTree = "<group>"; };
+		03A0909626EF7FF700BD7630 /* url_launcher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = url_launcher.xcframework; path = myID/url_launcher.xcframework; sourceTree = "<group>"; };
+		03A0909726EF7FF700BD7630 /* App.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = App.xcframework; path = myID/App.xcframework; sourceTree = "<group>"; };
+		03A090A426EF800200BD7630 /* ml_vision.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ml_vision.xcframework; path = myID/ml_vision.xcframework; sourceTree = "<group>"; };
+		03A090A526EF800200BD7630 /* FlutterPluginRegistrant.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlutterPluginRegistrant.xcframework; path = myID/FlutterPluginRegistrant.xcframework; sourceTree = "<group>"; };
+		4380148C2E57444B1CAC8A81 /* Pods-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.release.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.release.xcconfig"; sourceTree = "<group>"; };
+		939E2BDBDD588BD6F57E1E95 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8EC6FD1AB56E85ACD1363A4 /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,16 +76,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030663ED26DF535B006A175E /* Reachability.xcframework in Frameworks */,
-				030663E326DF535B006A175E /* camera.xcframework in Frameworks */,
-				030663E926DF535B006A175E /* device_info.xcframework in Frameworks */,
-				030663EF26DF535B006A175E /* url_launcher.xcframework in Frameworks */,
-				030663EB26DF535B006A175E /* App.xcframework in Frameworks */,
-				030663F926DF59CB006A175E /* FlutterPluginRegistrant.xcframework in Frameworks */,
-				030663E726DF535B006A175E /* package_info.xcframework in Frameworks */,
-				030663F326DF535B006A175E /* Flutter.xcframework in Frameworks */,
-				030663F126DF535B006A175E /* connectivity.xcframework in Frameworks */,
-				030663E526DF535B006A175E /* native_device_orientation.xcframework in Frameworks */,
+				855B9B59C5104F1CFEA3FE93 /* Pods_Test.framework in Frameworks */,
+				03A090A226EF7FF800BD7630 /* App.xcframework in Frameworks */,
+				03A0909C26EF7FF800BD7630 /* native_device_orientation.xcframework in Frameworks */,
+				03A0909A26EF7FF800BD7630 /* camera.xcframework in Frameworks */,
+				03A090A026EF7FF800BD7630 /* url_launcher.xcframework in Frameworks */,
+				03A0909E26EF7FF800BD7630 /* package_info.xcframework in Frameworks */,
+				03A0909826EF7FF800BD7630 /* device_info.xcframework in Frameworks */,
+				03A090A626EF800200BD7630 /* ml_vision.xcframework in Frameworks */,
+				03A090A726EF800200BD7630 /* FlutterPluginRegistrant.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +97,7 @@
 				030663C426DF52CA006A175E /* Test */,
 				030663C326DF52CA006A175E /* Products */,
 				030663D926DF535B006A175E /* Frameworks */,
+				26D7B3290F9FEA8F97B1FB1E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,18 +126,26 @@
 		030663D926DF535B006A175E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				030663F826DF59CB006A175E /* FlutterPluginRegistrant.xcframework */,
-				030663DE26DF535B006A175E /* App.xcframework */,
-				030663DA26DF535B006A175E /* camera.xcframework */,
-				030663E126DF535B006A175E /* connectivity.xcframework */,
-				030663DD26DF535B006A175E /* device_info.xcframework */,
-				030663E226DF535B006A175E /* Flutter.xcframework */,
-				030663DB26DF535B006A175E /* native_device_orientation.xcframework */,
-				030663DC26DF535B006A175E /* package_info.xcframework */,
-				030663DF26DF535B006A175E /* Reachability.xcframework */,
-				030663E026DF535B006A175E /* url_launcher.xcframework */,
+				03A090A526EF800200BD7630 /* FlutterPluginRegistrant.xcframework */,
+				03A090A426EF800200BD7630 /* ml_vision.xcframework */,
+				03A0909726EF7FF700BD7630 /* App.xcframework */,
+				03A0909326EF7FF700BD7630 /* camera.xcframework */,
+				03A0909226EF7FF700BD7630 /* device_info.xcframework */,
+				03A0909426EF7FF700BD7630 /* native_device_orientation.xcframework */,
+				03A0909526EF7FF700BD7630 /* package_info.xcframework */,
+				03A0909626EF7FF700BD7630 /* url_launcher.xcframework */,
+				939E2BDBDD588BD6F57E1E95 /* Pods_Test.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26D7B3290F9FEA8F97B1FB1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8EC6FD1AB56E85ACD1363A4 /* Pods-Test.debug.xcconfig */,
+				4380148C2E57444B1CAC8A81 /* Pods-Test.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +155,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 030663D626DF52CD006A175E /* Build configuration list for PBXNativeTarget "Test" */;
 			buildPhases = (
+				D082C9507D70FA80A4F8DABC /* [CP] Check Pods Manifest.lock */,
 				030663BE26DF52CA006A175E /* Sources */,
 				030663BF26DF52CA006A175E /* Frameworks */,
 				030663C026DF52CA006A175E /* Resources */,
 				030663F526DF535B006A175E /* Embed Frameworks */,
+				151C152401DA64864FAF27AE /* [CP] Embed Pods Frameworks */,
+				03E7591916969E2ABE03AC8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,6 +216,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03E7591916969E2ABE03AC8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		151C152401DA64864FAF27AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test/Pods-Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D082C9507D70FA80A4F8DABC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		030663BE26DF52CA006A175E /* Sources */ = {
@@ -363,12 +427,16 @@
 		};
 		030663D726DF52CD006A175E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8EC6FD1AB56E85ACD1363A4 /* Pods-Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86VMSY4FK5;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/myID/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myID/",
+				);
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -383,12 +451,16 @@
 		};
 		030663D826DF52CD006A175E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4380148C2E57444B1CAC8A81 /* Pods-Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86VMSY4FK5;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/myID/";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myID/",
+				);
 				INFOPLIST_FILE = Test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

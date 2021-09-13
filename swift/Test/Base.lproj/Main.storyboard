@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="pv7-DU-yi0">
-                                <rect key="frame" x="0.0" y="410.5" width="414" height="75.5"/>
+                                <rect key="frame" x="0.0" y="382.5" width="414" height="131.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-te-Pjt">
                                         <rect key="frame" x="147.5" y="0.0" width="119" height="30"/>
@@ -26,8 +26,22 @@
                                             <action selector="faceScannerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="koc-Ct-Spt"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8nj-HF-Y1e">
+                                        <rect key="frame" x="123" y="55" width="168" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strong mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYg-nu-lTW">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cng-Qf-8Xq">
+                                                <rect key="frame" x="119" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result: ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNv-e0-JYA">
-                                        <rect key="frame" x="174.5" y="55" width="65" height="20.5"/>
+                                        <rect key="frame" x="174.5" y="111" width="65" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -46,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="resultLabel" destination="xNv-e0-JYA" id="d7C-ag-mFf"/>
+                        <outlet property="scanMode" destination="cng-Qf-8Xq" id="dWm-7b-qqk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
