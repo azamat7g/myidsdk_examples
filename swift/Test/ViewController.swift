@@ -13,17 +13,10 @@ import FlutterPluginRegistrant
 class ViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
-<<<<<<< HEAD
     @IBOutlet weak var scanMode: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-=======
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
->>>>>>> 29a79f30b01b69dc36bada275c5c824beb829187
     }
 
 
@@ -39,10 +32,7 @@ class ViewController: UIViewController {
                 URLQueryItem(name: "redirect_uri", value: __REDIRECT_URL__),
                 URLQueryItem(name: "scope", value: "address,contacts,doc_data,common_data"),
                 URLQueryItem(name: "language", value: "uz"),
-<<<<<<< HEAD
                 URLQueryItem(name: "scan_mode", value: self.scanMode.isOn ? "strong" : "simple;"),
-=======
->>>>>>> 29a79f30b01b69dc36bada275c5c824beb829187
 //                URLQueryItem(name: "passport", value: "AA1234567"),
 //                URLQueryItem(name: "birthday", value: "01.01.2000"),
 //                URLQueryItem(name: "user_hash", value: "1234567891234567"),

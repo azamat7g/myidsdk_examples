@@ -17,11 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="pv7-DU-yi0">
-<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="382.5" width="414" height="131.5"/>
-=======
-                                <rect key="frame" x="0.0" y="410.5" width="414" height="75.5"/>
->>>>>>> 29a79f30b01b69dc36bada275c5c824beb829187
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-te-Pjt">
                                         <rect key="frame" x="147.5" y="0.0" width="119" height="30"/>
@@ -30,7 +26,6 @@
                                             <action selector="faceScannerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="koc-Ct-Spt"/>
                                         </connections>
                                     </button>
-<<<<<<< HEAD
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8nj-HF-Y1e">
                                         <rect key="frame" x="123" y="55" width="168" height="31"/>
                                         <subviews>
@@ -47,10 +42,6 @@
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result: ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNv-e0-JYA">
                                         <rect key="frame" x="174.5" y="111" width="65" height="20.5"/>
-=======
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result: ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNv-e0-JYA">
-                                        <rect key="frame" x="174.5" y="55" width="65" height="20.5"/>
->>>>>>> 29a79f30b01b69dc36bada275c5c824beb829187
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -69,10 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="resultLabel" destination="xNv-e0-JYA" id="d7C-ag-mFf"/>
-<<<<<<< HEAD
                         <outlet property="scanMode" destination="cng-Qf-8Xq" id="dWm-7b-qqk"/>
-=======
->>>>>>> 29a79f30b01b69dc36bada275c5c824beb829187
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
