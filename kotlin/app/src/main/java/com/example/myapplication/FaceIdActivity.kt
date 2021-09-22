@@ -36,7 +36,6 @@ class FaceIdActivity : FragmentActivity() {
         uri
             .appendPath("login")
             .appendQueryParameter("client_id", __YOUR_CLIENT_ID__)
-            .appendQueryParameter("redirect_uri", __YOUR_CLIENT_ID__)
             .appendQueryParameter("scope", "address,contacts,doc_data,common_data")
             .appendQueryParameter("language", "uz")
             .appendQueryParameter("scan_mode", bundle?.getString("mode"))

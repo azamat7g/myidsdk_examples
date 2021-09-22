@@ -68,7 +68,6 @@ func loadEngine() {
         uri.path = "/login"
         uri.queryItems = [
             URLQueryItem(name: "client_id", value: __CLIENT_ID__),
-            URLQueryItem(name: "redirect_uri", value: __REDIRECT_URL__),
             URLQueryItem(name: "scope", value: "address,contacts,doc_data,common_data"),
             URLQueryItem(name: "language", value: "uz"),
             URLQueryItem(name: "scan_mode", value: self.scanMode.isOn ? "strong" : "simple"),
@@ -114,7 +113,6 @@ SDK yordamida mijoz axborot tizimi bilan MyID biometrik identifikasiya axborot t
     "code": "code", //SDK orqali olingan kod
     "client_id": "CLIENT_ID", //mijoz identifikatori (myid administratori tomonidan taqdim etiladi yoki mijoz konsoli orqali olinadi)
     "client_secret": "CLIENT_SECRET", //mijoz sekreti (myid administratori tomonidan taqdim etiladi yoki mijoz konsoli orqali olinadi)
-    "redirect_uri": "REDIRECT_URI", // mijoz tomonidan taqdim etiladigan qayta yo‘naltirish URL manzili
 }
 ```
 
@@ -264,7 +262,7 @@ So‘rovga javob quyidagi ko‘rinishda keladi:
 | DateFrom                 | Ro‘yhatdan o‘tgan sana                                                                                                                                              |
 | DateTill                 | Ro‘yhat amal qilish muddati                                                                                                                                         |
 | Adress                   | Manzil                                                                                                                                                              |
-| authentication\_method   | Autentifikasiya metodi (simple, strong) 
+| authentication\_method   | Autentifikasiya metodi (strong) 
 
 ### Mijozning MyID OAUTH 2.0 serveri bilan o‘zaro ma'lumot almashish sxemasi
 

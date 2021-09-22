@@ -306,7 +306,6 @@ private fun initFlutterEngine() {
     uri
         .appendPath("login")
         .appendQueryParameter("client_id", __YOUR_CLIENT_ID__)
-        .appendQueryParameter("redirect_uri", __YOUR_REDIRECT_URL__)
         .appendQueryParameter("scope", "address,contacts,doc_data,common_data")
         .appendQueryParameter("language", "uz")
         .appendQueryParameter("scan_mode", bundle?.getString("mode"))
@@ -338,7 +337,6 @@ private void initFlutterEngine() {
     uri
             .appendPath("login")
             .appendQueryParameter("client_id", __YOUR_CLIENT_ID__)
-            .appendQueryParameter("redirect_uri", __YOUR_REDIRECT_URL__)
             .appendQueryParameter("scope", "address,contacts,doc_data,common_data")
             .appendQueryParameter("language", "uz")
             .appendQueryParameter("scan_mode", bundle.getString("mode"))
@@ -361,7 +359,6 @@ private void initFlutterEngine() {
 
 В функции `initFlutterEngine` мы передаем все параметры в SDK через Uri.
 - `client_id`: специальный идентификатор, предоставленный вам
-- `redirect_uri`: URL для обмена данными во время подключения
 - `scope`: список необходимых вам групп данных
 - `language`: язык интерфейса SDK. Доступные языки
      - `en`: Узбекский (латынь)
@@ -474,7 +471,6 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.
     "code": "code", //код, полученный с помощью SDK 
     "client_id": "CLIENT_ID", //идентификатор клиента (предоставляется администратором myid или получается из консоли администратора организации)
     "client_secret": "CLIENT_SECRET", //секрет клиента (предоставляется администратором myid или получается из консоли администратора организации)
-    "redirect_uri": "REDIRECT_URI", // URL перенаправления клиента
 }
 ```
 
@@ -625,7 +621,7 @@ protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.
 | DateFrom                 | Дата начала регистрации                                                                                                                                                    |
 | DateTill                 | Дата окончания регистрации                                                                                                                                                 |
 | Adress                   | Адрес                                                                                                                                                                      |
-| authentication\_method   | Метод аутентификации (simple, strong)
+| authentication\_method   | Метод аутентификации (strong)
 
 
 ### Схема взаимодействия клиента с сервером OAUTH 2.0 myid

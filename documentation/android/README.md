@@ -305,7 +305,6 @@ private fun initFlutterEngine() {
     uri
         .appendPath("login")
         .appendQueryParameter("client_id", __YOUR_CLIENT_ID__)
-        .appendQueryParameter("redirect_uri", __YOUR_REDIRECT_URL__)
         .appendQueryParameter("scope", "address,contacts,doc_data,common_data")
         .appendQueryParameter("language", "uz")
         .appendQueryParameter("scan_mode", bundle?.getString("mode"))
@@ -337,7 +336,6 @@ private void initFlutterEngine() {
     uri
             .appendPath("login")
             .appendQueryParameter("client_id", __YOUR_CLIENT_ID__)
-            .appendQueryParameter("redirect_uri", __YOUR_REDIRECT_URL__)
             .appendQueryParameter("scope", "address,contacts,doc_data,common_data")
             .appendQueryParameter("language", "uz")
             .appendQueryParameter("scan_mode", bundle.getString("mode"))
@@ -360,7 +358,6 @@ private void initFlutterEngine() {
 
 `initFlutterEngine` funksiyada Uri orqali hamma parametrlarni SDKga berib yuboramiz.
 - client_id: siz uchun berilgan mahsus ID
-- redirect_uri: ulanish paytida malumot almashish URL manzili
 - scope: sizga kerakli bo'lgan ma'lumotlar guruhi ro'yhati
 - language: SDKni interfeys tili. Mavjud tillar 
     - uz: O'zbekcha (lotin)
@@ -469,7 +466,6 @@ SDK yordamida mijoz axborot tizimi bilan MyID biometrik identifikasiya axborot t
     "code": "code", //SDK orqali olingan kod
     "client_id": "CLIENT_ID", //mijoz identifikatori (myid administratori tomonidan taqdim etiladi yoki mijoz konsoli orqali olinadi)
     "client_secret": "CLIENT_SECRET", //mijoz sekreti (myid administratori tomonidan taqdim etiladi yoki mijoz konsoli orqali olinadi)
-    "redirect_uri": "REDIRECT_URI", // mijoz tomonidan taqdim etiladigan qayta yo‘naltirish URL manzili
 }
 ```
 
@@ -619,7 +615,7 @@ So‘rovga javob quyidagi ko‘rinishda keladi:
 | DateFrom                 | Ro‘yhatdan o‘tgan sana                                                                                                                                              |
 | DateTill                 | Ro‘yhat amal qilish muddati                                                                                                                                         |
 | Adress                   | Manzil                                                                                                                                                              |
-| authentication\_method   | Autentifikasiya metodi (simple, strong) 
+| authentication\_method   | Autentifikasiya metodi (strong) 
 
 ### Mijozning MyID OAUTH 2.0 serveri bilan o‘zaro ma'lumot almashish sxemasi
 

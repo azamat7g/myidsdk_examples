@@ -29,7 +29,6 @@ class ViewController: UIViewController {
             uri.path = "/login"
             uri.queryItems = [
                 URLQueryItem(name: "client_id", value: __CLIENT_ID__),
-                URLQueryItem(name: "redirect_uri", value: __REDIRECT_URL__),
                 URLQueryItem(name: "scope", value: "address,contacts,doc_data,common_data"),
                 URLQueryItem(name: "language", value: "uz"),
                 URLQueryItem(name: "scan_mode", value: self.scanMode.isOn ? "strong" : "simple"),
