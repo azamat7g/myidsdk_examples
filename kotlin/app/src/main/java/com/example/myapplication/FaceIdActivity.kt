@@ -21,11 +21,11 @@ class FaceIdActivity : FragmentActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_face_id)
-
         initFlutterEngine()
         attachFlutterFragment()
+        
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_face_id)
     }
 
     private fun initFlutterEngine() {
