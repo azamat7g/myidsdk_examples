@@ -22,11 +22,11 @@ public class FaceIdActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        initFlutterEngine();
-        attachFlutterFragment();
-        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_id);
+        
+        initFlutterEngine();
+        attachFlutterFragment();
     }
 
     private void initFlutterEngine() {
