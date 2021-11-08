@@ -26,8 +26,9 @@ iOS loyihada SDKni ulashdan oldin loyihani minimum iOS versiyasini 11ga almashti
 
 ```
 pod 'Flutter', :podspec => './myID/Flutter.podspec'
-pod 'GoogleMLKit/FaceDetection', '~> 2.2.0'
-pod 'GoogleMLKit/TextRecognition', '~> 2.2.0'
+pod 'GoogleMLKit/FaceDetection', '~> 2.4.0'
+pod 'GoogleMLKit/TextRecognition', '~> 2.4.0'
+pod 'GoogleMLKit/BarcodeScanning', '~> 2.4.0'
 ```
 
 `pod install` buyug'ini ishga tushuramiz
