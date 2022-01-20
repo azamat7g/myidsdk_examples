@@ -2,7 +2,7 @@ target 'Test' do
   use_frameworks!
 
   pod 'Flutter', :podspec => './myID/Flutter.podspec'
-  pod 'GoogleMLKit/FaceDetection', '~> 2.2.0'
-  pod 'GoogleMLKit/TextRecognition', '~> 2.2.0'
-  pod 'GoogleMLKit/BarcodeScanning', '~> 2.4.0'
+  pod 'GoogleMLKit/FaceDetection', '~> 2'
+  pod 'GoogleMLKit/TextRecognition', '~> 2'
+  pod 'GoogleMLKit/BarcodeScanning', '~> 2'
 end
