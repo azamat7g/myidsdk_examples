@@ -6,7 +6,7 @@
 MyID – bu O'zbekistonda masofaviy identifikatsiyalashning eng oson, qulay va ishonchli usuli.
 
 ## Talablar
-myID SDK ni o'z loyihangizga ulashdan oldin siz bizdan maxsus `clinet_id` va `clinet_secrect` tokenlarini va SDK ni zip arxivini olishingiz kerak.
+myID SDK ni o'z loyihangizga ulashdan oldin siz bizdan maxsus `clinet_id` va `clinet_secrect` tokenlarini olishingiz kerak.
 
 ## Boshlashdan oldin
 Pastda keltiriladigan kodlarni to'li ishlaydigan talqinini ushbu repozitoriyadan topish mumkun https://github.com/azamat7g/myidsdk_examples
@@ -25,7 +25,7 @@ android {
 
     repositories {
         maven {
-            url './libs/myid'
+            url 'https://storage.uzinfocom.uz/libs/android/myid'
         }
         maven {
             url "https://storage.googleapis.com/download.flutter.io"
@@ -33,6 +33,8 @@ android {
     }
 }
 ```
+
+! Agar settings.gradle faylida `dependencyResolutionManagement` ishlatigan bo'lsa unda tepadagi `repositories`ni `dependencyResolutionManagement`ni repozitoriyalariga qo'shib qo'yamiz. Shunda `build.gradle`ga hech narsa qo'shilmaydi.
 
 "dependencies" qismida SDKni ulaymiz:
 
@@ -42,30 +44,6 @@ dependencies {
 
     implementation 'uz.uzinfocom.myidsdk:flutter_release:$VERSION'
 }
-```
-
-va `app/libs` papkasini ichiga SDKni zip arxivdan yoyib yuboramiz. Fayllar joylashuvi quyidagi ko'rinishga kelishi kerak
-
-```
-├── libs
-│   └── myid
-│       └── uz
-│           └── uzinfocom
-│               └── myidsdk
-│                   ├── flutter_release
-│                   │   ├── 1.0
-│                   │   │   ├── flutter_release-1.0.aar
-│                   │   │   ├── flutter_release-1.0.aar.md5
-│                   │   │   ├── flutter_release-1.0.aar.sha1
-│                   │   │   ├── flutter_release-1.0.pom
-│                   │   │   ├── flutter_release-1.0.pom.md5
-│                   │   │   └── flutter_release-1.0.pom.sha1
-│                   │   ├── maven-metadata.xml
-│                   │   ├── maven-metadata.xml.md5
-│                   │   └── maven-metadata.xml.sha1
-│                   └── modules
-│                       ├── ...
-│                       ......
 ```
 
 ## SDKni loyihaga qo'shish
@@ -233,7 +211,7 @@ private fun setMethodChannels(flutterEngine: FlutterEngine) {
         FLUTTER_CHANNEL
     ).setMethodCallHandler { call, result ->
         when (call.method) {
-            "result" -> {
+            "resultJson" -> {
                 val resultIntent = Intent()
                 resultIntent.putExtra("code", call.arguments.toString())
                 setResult(RESULT_OK, resultIntent)
@@ -278,7 +256,7 @@ private void setMethodChannels(FlutterEngine flutterEngine) {
             FLUTTER_CHANNEL
     ).setMethodCallHandler(
             (call, result) -> {
-                if ("result".equals(call.method)) {
+                if ("resultJson".equals(call.method)) {
                     Intent resultIntent = new Intent();
                     resultIntent.putExtra("code", call.arguments.toString());
                     setResult(RESULT_OK, resultIntent);
