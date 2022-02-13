@@ -34,7 +34,7 @@ android {
 }
 ```
 
-! Agar settings.gradle faylida `dependencyResolutionManagement` ishlatigan bo'lsa unda tepadagi `repositories`ni `dependencyResolutionManagement`ni repozitoriyalariga qo'shib qo'yamiz. Shunda `build.gradle`ga hech narsa qo'shilmaydi.
+! Agar `settings.gradle` faylida `dependencyResolutionManagement` ishlatigan bo'lsa unda tepadagi `repositories`ni `dependencyResolutionManagement`ni repozitoriyalariga qo'shib qo'yamiz. Shunda `build.gradle`ga hech narsa qo'shilmaydi.
 
 "dependencies" qismida SDKni ulaymiz:
 
