@@ -25,7 +25,7 @@ android {
 
     repositories {
         maven {
-            url './libs/myid'
+            url 'https://storage.uzinfocom.uz/libs/android/myid'
         }
         maven {
             url "https://storage.googleapis.com/download.flutter.io"
@@ -33,6 +33,8 @@ android {
     }
 }
 ```
+! Если в `settings.gradle` исползуется `dependencyResolutionManagement` тогда вместо `build.gradle` все `repositories` добавим в `dependencyResolutionManagement`
+
 В разделе `dependencies` подключаем SDK:
 
 ```gradle
@@ -235,7 +237,7 @@ private fun setMethodChannels(flutterEngine: FlutterEngine) {
         FLUTTER_CHANNEL
     ).setMethodCallHandler { call, result ->
         when (call.method) {
-            "result" -> {
+            "resultJson" -> {
                 val resultIntent = Intent()
                 resultIntent.putExtra("code", call.arguments.toString())
                 setResult(RESULT_OK, resultIntent)
@@ -280,7 +282,7 @@ private void setMethodChannels(FlutterEngine flutterEngine) {
             FLUTTER_CHANNEL
     ).setMethodCallHandler(
             (call, result) -> {
-                if ("result".equals(call.method)) {
+                if ("resultJson".equals(call.method)) {
                     Intent resultIntent = new Intent();
                     resultIntent.putExtra("code", call.arguments.toString());
                     setResult(RESULT_OK, resultIntent);
