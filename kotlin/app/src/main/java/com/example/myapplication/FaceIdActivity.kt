@@ -82,7 +82,7 @@ class FaceIdActivity : FragmentActivity() {
             FLUTTER_CHANNEL
         ).setMethodCallHandler { call, result ->
             when (call.method) {
-                "result" -> {
+                "resultJson" -> {
                     val resultIntent = Intent()
                     resultIntent.putExtra("code", call.arguments.toString())
                     setResult(RESULT_OK, resultIntent)
