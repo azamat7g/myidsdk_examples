@@ -83,7 +83,7 @@ public class FaceIdActivity extends FragmentActivity {
                 FLUTTER_CHANNEL
         ).setMethodCallHandler(
                 (call, result) -> {
-                    if ("result".equals(call.method)) {
+                    if ("resultJson".equals(call.method)) {
                         Intent resultIntent = new Intent();
                         resultIntent.putExtra("code", call.arguments.toString());
                         setResult(RESULT_OK, resultIntent);
