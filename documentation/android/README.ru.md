@@ -313,6 +313,7 @@ private fun initFlutterEngine() {
         .appendQueryParameter("scan_mode", bundle?.getString("mode"))
         .appendQueryParameter("passport", "AA1234567")
         .appendQueryParameter("birthday", "01.01.2000")
+        .appendQueryParameter("threshold", "0.5")
         //.appendQueryParameter("user_hash", "1234567891234567")
 
     flutterEngine.navigationChannel.setInitialRoute(uri.toString())
