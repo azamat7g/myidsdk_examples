@@ -24,7 +24,6 @@ class FaceIdActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_face_id)
         
-        initFlutterEngine()
         attachFlutterFragment()
     }
 
@@ -66,14 +65,18 @@ class FaceIdActivity : FragmentActivity() {
                     .build() as FlutterFragment
         }
 
-        supportFragmentManager
-            .beginTransaction()
-            .add(
-                R.id.fragmentContainerView,
-                flutterFragment!!,
-                FLUTTER_FRAGMENT
-            )
-            .commit()
+        if (!flutterFragment!!.isAdded) {
+            supportFragmentManager
+                .beginTransaction()
+                .add(
+                    R.id.fragmentContainerView,
+                    flutterFragment!!,
+                    FLUTTER_FRAGMENT
+                )
+                .commit()
+            
+            initFlutterEngine()
+        }
     }
 
     private fun setMethodChannels(flutterEngine: FlutterEngine) {
