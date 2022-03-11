@@ -25,7 +25,6 @@ public class FaceIdActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_id);
         
-        initFlutterEngine();
         attachFlutterFragment();
     }
 
@@ -67,14 +66,17 @@ public class FaceIdActivity extends FragmentActivity {
                             .build();
         }
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(
-                        R.id.fragmentContainerView,
-                        flutterFragment,
-                        FLUTTER_FRAGMENT
-                )
-                .commit();
+        if (!flutterFragment.isAdded) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .add(
+                            R.id.fragmentContainerView,
+                            flutterFragment,
+                            FLUTTER_FRAGMENT
+                    )
+                    .commit();
+            initFlutterEngine();
+        }
     }
 
     private void setMethodChannels(FlutterEngine flutterEngine) {
