@@ -289,6 +289,9 @@ private fun initFlutterEngine() {
         .appendQueryParameter("passport", "AA1234567")
         .appendQueryParameter("birthday", "01.01.2000")
         //.appendQueryParameter("user_hash", "1234567891234567")
+        //.appendQueryParameter("pinfl", "31111110110011")
+        //.appendQueryParameter("phone", "+998001234567")
+        //.appendQueryParameter("threshold", "0.6")
 
     flutterEngine.navigationChannel.setInitialRoute(uri.toString())
     flutterEngine.getDartExecutor().executeDartEntrypoint(
@@ -316,10 +319,13 @@ private void initFlutterEngine() {
             .appendQueryParameter("client_id", __YOUR_CLIENT_ID__)
             .appendQueryParameter("scope", "address,contacts,doc_data,common_data")
             .appendQueryParameter("language", "uz")
-            .appendQueryParameter("scan_mode", bundle.getString("mode"))
+            .appendQueryParameter("scan_mode", bundle?.getString("mode"));
+            //.appendQueryParameter("passport", "AA1234567")
+            //.appendQueryParameter("birthday", "01.01.2000")
             //.appendQueryParameter("user_hash", "1234567891234567")
-            .appendQueryParameter("passport", "AA1234567")
-            .appendQueryParameter("birthday", "01.01.2000");
+            //.appendQueryParameter("pinfl", "31111110110011")
+            //.appendQueryParameter("phone", "+998001234567")
+            //.appendQueryParameter("threshold", "0.6")
 
     flutterEngine.getNavigationChannel().setInitialRoute(uri.toString());
     flutterEngine.getDartExecutor().executeDartEntrypoint(
