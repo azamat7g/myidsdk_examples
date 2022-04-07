@@ -66,7 +66,7 @@ public class FaceIdActivity extends FragmentActivity {
                             .build();
         }
 
-        if (!flutterFragment.isAdded) {
+        if (!flutterFragment.isAdded()) {
             getSupportFragmentManager()
                     .beginTransaction()
                     .add(
