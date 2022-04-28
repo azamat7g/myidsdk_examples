@@ -95,7 +95,7 @@ class FaceIdActivity : FragmentActivity() {
                 }
                 "errorResultJson" -> {
                     val resultIntent = Intent()
-                    resultIntent.putExtra("code", call.arguments.toString())
+                    resultIntent.putExtra("error", call.arguments.toString())
                     setResult(RESULT_CANCELED, resultIntent)
 
                     Log.d("CODE", call.arguments.toString())
