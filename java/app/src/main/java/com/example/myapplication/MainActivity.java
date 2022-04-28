@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 assert data != null;
                 textView.setText(data.getStringExtra("code"));
+            } else if (resultCode == RESULT_CANCELED) {
+                assert data != null;
+                textView.setText(data.getStringExtra("error"));
             }
         }
     }
