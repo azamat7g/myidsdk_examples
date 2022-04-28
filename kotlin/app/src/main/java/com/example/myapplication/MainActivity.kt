@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == activityRequestCode) {
             if (resultCode == RESULT_OK) {
                 textView.setText(data?.getStringExtra("code"));
+            } else if (resultCode == RESULT_CANCELED) {
+                textView.setText(data?.getStringExtra("error"))
             }
         }
     }
