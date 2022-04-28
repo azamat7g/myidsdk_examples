@@ -93,6 +93,16 @@ class FaceIdActivity : FragmentActivity() {
                     result.success(true)
                     finish()
                 }
+                "errorResultJson" -> {
+                    val resultIntent = Intent()
+                    resultIntent.putExtra("code", call.arguments.toString())
+                    setResult(RESULT_CANCELED, resultIntent)
+
+                    Log.d("CODE", call.arguments.toString())
+
+                    result.success(true)
+                    finish()
+                }
             }
         }
     }
