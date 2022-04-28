@@ -93,6 +93,15 @@ public class FaceIdActivity extends FragmentActivity {
                         result.success(true);
                         finish();
                     }
+                    
+                    if ("errorResultJson".equals(call.method)) {
+                        Intent resultIntent = new Intent();
+                        resultIntent.putExtra("error", call.arguments.toString());
+                        setResult(RESULT_CANCELED, resultIntent);
+
+                        result.success(true);
+                        finish();
+                    }
                 }
         );
     }
