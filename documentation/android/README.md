@@ -351,6 +351,7 @@ private void initFlutterEngine() {
 - user_hash: foydalanuvchini pasport ma'lumoti va tug'ilgan kunining hashi
 - passport: foydalanuvchining pasport raqami
 - birthday: foydalanuvchini tug'ilgan kuni
+- external_id: axborot tizimingizning ID
 
 ! agar (`passport` va `birthday`) yoki `user_hash` to'gri formatda kiritilsa SDK pasport ma'lumotlarini so'rash oynasini ochmaydi.
 
