@@ -45,30 +45,6 @@ dependencies {
 }
 ```
 
-и раскапуйте SDK из zip-архива в папку `app/libs`. Расположение файлов должно выглядеть следующим образом: 
-
-```
-├── libs
-│   └── myid
-│       └── uz
-│           └── uzinfocom
-│               └── myidsdk
-│                   ├── flutter_release
-│                   │   ├── 1.0
-│                   │   │   ├── flutter_release-1.0.aar
-│                   │   │   ├── flutter_release-1.0.aar.md5
-│                   │   │   ├── flutter_release-1.0.aar.sha1
-│                   │   │   ├── flutter_release-1.0.pom
-│                   │   │   ├── flutter_release-1.0.pom.md5
-│                   │   │   └── flutter_release-1.0.pom.sha1
-│                   │   ├── maven-metadata.xml
-│                   │   ├── maven-metadata.xml.md5
-│                   │   └── maven-metadata.xml.sha1
-│                   └── modules
-│                       ├── ...
-│                       ......
-```
-
 ## Добавить SDK в проект 
 SDKni loyihaga qo'shish uchun maxsus Activity yaratish kerak. Buning uchun "Android studio" dasturida `File > New > Activity > Empty activity` tanlab yangi activity qo'shamiz. Activityga nom beramiz. Misol uchun `FaceIdActivity`. Activityni muvofaqiyatlik qo'shganimizdan keyin uni `FragmentActivity`dan extend olamiz.
 
