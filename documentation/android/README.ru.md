@@ -43,6 +43,9 @@ dependencies {
 
     implementation 'uz.uzinfocom.myidsdk:flutter_release:$VERSION'
 }
+
+Чтобы обновить Андроид нужно в поле $Version прописать 1.12
+
 ```
 
 ## Добавить SDK в проект 
