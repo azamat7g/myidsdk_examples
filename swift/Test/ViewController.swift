@@ -42,6 +42,7 @@ class ViewController: UIViewController {
         GeneratedPluginRegistrant.register(with: engine);
 
         let viewController = FlutterViewController(engine: engine, nibName: nil, bundle: nil)
+        viewController.modalPresentationStyle = .fullScreen
         present(viewController, animated: true, completion: nil)
         
         let channel = FlutterMethodChannel(name: "channel/myid", binaryMessenger: viewController.binaryMessenger)
