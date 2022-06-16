@@ -48,10 +48,14 @@ class ViewController: UIViewController {
         let channel = FlutterMethodChannel(name: "channel/myid", binaryMessenger: viewController.binaryMessenger)
         channel.setMethodCallHandler({
           (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
-            if (call.method == "result") {
+            if (call.method == "resultJson") {
                 viewController.popRoute();
                 
                 self.resultLabel.text = "Result: \(String(describing: call.arguments))";
+            } else if (call.method == "errorResultJson") {
+                viewController.popRoute();
+                
+                self.resultLabel.text = "Error: \(String(describing: call.arguments))";
             }
         })
     }
