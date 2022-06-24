@@ -4,7 +4,7 @@
 MyID – bu O'zbekistonda masofaviy identifikatsiyalashning eng oson, qulay va ishonchli usuli.
 
 ## Talablar
-myID SDK ni o'z loyihangizga ulashdan oldin siz bizdan maxsus `clinet_id` va `clinet_secrect` tokenlarini va SDK ni zip arxivini olishingiz kerak.
+myID SDK ni o'z loyihangizga ulashdan oldin siz bizdan maxsus `client_id` va `client_secret` tokenlarini va SDK ni zip arxivini olishingiz kerak.
 
 ## Boshlashdan oldin
 Pastda keltiriladigan kodlarni to'li ishlaydigan talqinini ushbu repozitoriyadan topish mumkun https://github.com/azamat7g/myidsdk_examples
