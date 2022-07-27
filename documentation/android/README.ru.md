@@ -6,7 +6,7 @@
 MyID - самый простой, удобный и надежный способ удаленной идентификации в Узбекистане. 
 
 ## Требования 
-Перед подключением myID SDK к вашему проекту, вам необходимо получить от нас специальные токены `clinet_id` и `clinet_secrect` и zip-архив SDK. 
+Перед подключением myID SDK к вашему проекту, вам необходимо получить от нас специальные токены `client_id` и `client_secret` и zip-архив SDK. 
 
 ## Прежде чем вы начнете 
 Полнофункциональную версию приведенных ниже кодов можно найти в этом [репозитории](https://github.com/azamat7g/myidsdk_examples)
@@ -51,7 +51,7 @@ dependencies {
 ## Добавить SDK в проект 
 SDKni loyihaga qo'shish uchun maxsus Activity yaratish kerak. Buning uchun "Android studio" dasturida `File > New > Activity > Empty activity` tanlab yangi activity qo'shamiz. Activityga nom beramiz. Misol uchun `FaceIdActivity`. Activityni muvofaqiyatlik qo'shganimizdan keyin uni `FragmentActivity`dan extend olamiz.
 
-Чтобы добавить SDK в проект, необходимо создать специальное действие. Для этого в программе Android studio выберите `File > New > Activity > Empty activity` и добавьте новое действие. Мы называем деятельность. Например, `FragmentActivity`. После того, как мы успешно добавили действие, мы можем расширить его из `FragmentActivity`. 
+Чтобы добавить SDK в проект, необходимо создать специальное действие. Для этого в программе Android studio выберите `File > New > Activity > Empty activity` и добавьте новое действие. Мы называем деятельность. Например, `FaceIdActivity`. После того, как мы успешно добавили действие, мы можем расширить его из `FragmentActivity`. 
 
 
 Kotlin
